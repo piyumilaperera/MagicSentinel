@@ -415,22 +415,6 @@ void print_banner() {
 
 
 
-/*void enable_ansi() 
-{
-
-    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-    if (hOut == INVALID_HANDLE_VALUE) return;
-    DWORD dwMode = 0;
-    if (!GetConsoleMode(hOut, &dwMode)) return;
-    SetConsoleMode(hOut, dwMode | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
-    SetConsoleOutputCP(CP_UTF8);
-
-}*/
-
-
-
-
-
 void buffercleaner(void)
 {	
 	int x;
