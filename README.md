@@ -3,7 +3,7 @@
 # MagicSentinel
 
 
-**File Signature & Magic Number Detector - A sentinel born by my passion for system security and the truth behind every file.**
+**File Signature & Magic Number Detector, A sentinel born by my passion for system security and the truth behind every file.**
 
 ![C](https://img.shields.io/badge/Language-C-blue?style=flat-square&logo=c)
 ![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-informational?style=flat-square)
