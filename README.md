@@ -107,11 +107,31 @@ You will be greeted by the MagicSentinel banner and a prompt. From there:
 <p align="center">
   <img src="https://github.com/piyumilaperera/MagicSentinel/blob/main/media/2.First_look.png"></p>
 
+<div align="center">
+
+The list command give informations about the files on the same path
+</div>
+
 <p align="center">
   <img src="https://github.com/piyumilaperera/MagicSentinel/blob/main/media/3.list.png"></p>
 
+<div align="center">
+
+It successfully detected the file type
+</div>
+
 <p align="center">
   <img src="https://github.com/piyumilaperera/MagicSentinel/blob/main/media/4.Success.png"></p>
+
+<div align="center">
+
+It successfully detected the spoofed one, and it gave a alert.
+</div>
+
+<p align="center">
+  <img src="https://github.com/piyumilaperera/MagicSentinel/blob/main/media/7.detected_a_spoofed_file.png"></p>
+
+<div align="center">
 
 ---
 
@@ -135,6 +155,11 @@ In rare cases, a file's first bytes may coincidentally match a known magic numbe
 Files encrypted or packed with tools like UPX may have their magic bytes overwritten, making detection unreliable.
 
 6. I tested this on windows and debian linux, but not on mac. Because i dont have one, but i am pretty sure that it should be run on mac without any issuse. But dont 100% sure.
+
+<div align="center">
+
+In here it gives a false positive on a ASCII file
+</div>
 
 <p align="center">
   <img src="https://github.com/piyumilaperera/MagicSentinel/blob/main/media/5.False_positive.png"></p>
