@@ -1,0 +1,723 @@
+# Magic Number Database File
+# Format: type|extension|threat_level|byte_offset|hex_bytes (space-separated)
+
+# If a single magic number supports multiple extensions, the full details must be repeated for each extension.
+
+#	ex :- (if "FF D8 FF" points to .jfif .jpe .jpeg)
+
+#			JPEG-EXIF-SPIFF images|jfif|Low|0|FF D8 FF
+#			JPEG-EXIF-SPIFF images|jpe|Low|0|FF D8 FF
+#			JPEG-EXIF-SPIFF images|jpeg|Low|0|FF D8 FF
+
+# Threat levels: Low, Mid, High
+# Feel free to add or edit(if current is wrong) any magic number signatures
+# I already added a comprehesive list
+
+
+
+
+##################################################################################################################################
+
+MPEG-4 v1|mp4|Low|0|00 00 00 14 66 74 79 70 69 73 6F 6D
+Windows Disk Image|tbi|Mid|0|00 00 00 00 14 00 00 00
+Bitcoin Core wallet.dat file|dat|Low|8|00 00 00 00 62 31 05 00 09 00 00 00 00 20 00 00 00 09 00 00 00 00 00 00
+MPEG-4 video_1|3gp5|Low|0|00 00 00 18 66 74 79 70
+MPEG-4 video_1|m4v|Low|0|00 00 00 18 66 74 79 70
+MPEG-4 video_1|mp4|Low|0|00 00 00 18 66 74 79 70
+Apple audio and video|m4a|Low|0|00 00 00 20 66 74 79 70 4D 34 41
+Lotus 1-2-3 (v1)|wk1|Low|0|00 00 02 00 06 04 06 00
+Netscape Navigator (v4) database|db|Low|0|00 06 15 61 00 00 00 02 00 00 04 D2 00 00 10 00
+Mbox table of contents file|none|Low|0|00 0D BB A0
+FLIC animation|fli|Low|0|00 11
+Digital Speech Standard file|dss|Low|0|02 64 73 73
+Nokia PC Suite Content Copier file|nfc|Low|0|03 00 00 00
+dBASE IV or dBFast configuration file|8db|Low|0|00
+ZSOFT Paintbrush file_2|pcx|Low|0|0A 03 01 01
+PowerPoint presentation subheader_2|ppt|Mid|512|0F 00 E8 03
+Lotus Notes database|nsf|Low|0|1A 00 00 04 00 00
+LH archive (old vers.-type 2)|arc|Mid|0|1A 03
+Compressed archive file|pak|Mid|0|1A 0B
+AIN Compressed Archive|ain|Mid|0|21 12
+Microsoft Outlook Exchange Offline Storage Folder|ost|Mid|0|21 42 44 4E
+VMware 4 Virtual Disk description|vmdk|Mid|0|23 20 44 69 73 6B 20 44
+MS Developer Studio project file|dsp|Low|0|23 20 4D 69 63 72 6F 73
+Skype audio compression|sil|Low|0|23 21 53 49 4C 4B 0A
+Brother-Babylock-Bernina Home Embroidery|pec|Low|0|23 50 45 43 30 30 30 31
+SPSS Data file|sav|Low|0|24 46 4C 32 40 28 23 29
+Encapsulated PostScript file|eps|Low|0|25 21 50 53 2D 41 64 6F
+PostScript file|ps|Low|0|25 21 50 53 2D 41 64 6F 62 65 2D
+Fuzzy bitmap (FBM) file|fbm|Low|0|25 62 69 74 6D 61 70
+RealMedia streaming media|rm|Low|0|2E 52 4D 46
+RealMedia streaming media|rmvb|Low|0|2E 52 4D 46
+NeXT-Sun Microsystems audio file|au|Low|0|2E 73 6E 64
+Tcpdump capture file|none|Low|0|34 CD B2 A1
+zisofs compressed file|none|Mid|0|37 E4 53 96 C9 DB D6 07
+Photoshop image|psd|Low|0|38 42 50 53
+Surfplan kite project file|sle|Low|0|3A 56 45 52 53 49 4F 4E
+Advanced Stream Redirector|asx|Low|0|3C
+AOL HTML mail|dci|Low|0|3C 21 64 6F 63 74 79 70
+User Interface Language|xml|Low|0|3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 3F 3E
+Picasa movie project file|mxf|Low|0|3C 43 54 72 61 6E 73 54 69 6D 65 6C 69 6E 65 3E
+Csound music|csd|Low|0|3C 43 73 6F 75 6E 64 53 79 6E 74 68 65 73 69 7A
+GPS Exchange (v1.1)|gpx|Low|0|3C 67 70 78 20 76 65 72 73 69 6F 6E 3D 22 31 2E
+Windows Help file_2|gid|Low|0|3F 5F 03 00
+Windows Help file_2|hlp|Low|0|3F 5F 03 00
+AOL address book|aby|Low|0|41 4F 4C 44 42
+AOL client preferences-settings file|ind|Low|0|41 4F 4C 49 44 58
+AOL personal file cabinet|org|Low|0|41 4F 4C 56 4D 31 30 30
+AOL personal file cabinet|pfc|Low|0|41 4F 4C 56 4D 31 30 30
+AVG6 Integrity database|dat|Low|0|41 56 47 36 5F 49 6E 74
+Palmpilot resource file|prc|Low|0|42 4F 4F 4B 4D 4F 42 49
+bzip2 compressed archive|bz2|Mid|0|42 5A 68
+bzip2 compressed archive|tar|Mid|0|42 5A 68
+bzip2 compressed archive|tbz2|Mid|0|42 5A 68
+bzip2 compressed archive|tb2|Mid|0|42 5A 68
+Blink compressed archive|bli|Mid|0|42 6C 69 6E 6B
+WordPerfect dictionary|cbd|Low|0|43 42 46 49 4C 45
+ISO-9660 CD Disc Image|iso|Mid|0|43 44 30 30 31
+Compressed ISO CD image|cso|Mid|0|43 49 53 4F
+VMware 3 Virtual Disk|vmdk|Mid|0|43 4F 57 44
+Calculux Indoor lighting project file|cin|Low|0|43 61 6C 63 75 6C 75 78 20 49 6E 64 6F 6F 72 20
+Palm Zire photo database|dbf|Low|0|44 42 46 48
+DVD info file|ifo|Low|0|44 56 44
+VideoVCD-VCDImager file|vcd|Low|0|45 4E 54 52 59 56 43 44
+EasyRecovery Saved State file|dat|Low|0|45 52 46 53 53 41 56 45
+DSD Storage Facility audio file|dsf|Low|0|44 53 44 20
+MS Document Imaging file|mdi|Low|0|45 50
+Audio Interchange File|aiff|Low|0|46 4F 52 4D 00
+General Regularly-distributed Information (GRIdded) Binary|grb|Low|0|47 52 49 42
+SAP PowerBuilder integrated development environment file|pbd|Low|0|48 44 52 2A 50 6F 77 65 72 42 75 69 6C 64 65 72
+SAS Transport dataset|xpt|Low|0|48 45 41 44 45 52 20 52 45 43 4F 52 44 2A 2A 2A
+MP3 audio file|mp3|Low|0|49 44 33
+Sprint Music Store audio|koz|Low|0|49 44 33 03 00 00 00
+JPEG2000 image files|jp2|Low|0|00 00 00 0C 6A 50 20 20
+MPEG-4 video_2|mp4|Low|0|00 00 00 1C 66 74 79 70
+3GPP2 multimedia files|3gp|Low|0|00 00 00 20 66 74 79 70
+Windows icon|ico|Low|0|00 00 01 00
+Windows printer spool file|spl|Low|0|00 00 01 00
+DVD video file|mpg|Low|0|00 00 01 BA
+DVD video file|vob|Low|0|00 00 01 BA
+QuattroPro spreadsheet|wb2|Low|0|00 00 02 00
+Amiga Hunk executable|none|High|0|00 00 03 F3
+Microsoft Money file|mny|Low|0|00 01 00 00 4D 53 49 53 41 4D 20 44 61 74 61 62 61 73 65
+BIOS details in RAM|none|High|0|00 14 00 00 01 02
+PowerPoint presentation subheader_1|ppt|Mid|512|00 6E 1E F0
+Webex Advanced Recording Format|arf|Low|0|01 00 02 00
+Firebird and Interbase database files|fdb|Low|0|01 00 39 30
+Firebird and Interbase database files|gdb|Low|0|01 00 39 30
+dBASE III file|db3|Low|0|00
+INFO2 Windows recycle bin_1|none|Low|0|04 00 00 00
+SkinCrafter skin|skf|Low|0|07 53 4B 46
+ZSOFT Paintbrush file_1|pcx|Low|0|0A 02 01 01
+Lotus Notes database template|ntf|Low|0|1A 00 00
+LH archive (old vers.-type 3)|arc|Mid|0|1A 04
+LH archive (old vers.-type 5)|arc|Mid|0|1A 09
+Matroska stream file_2|mkv|Low|0|1A 45 DF A3 93 42 82 88
+Runtime Software disk image|dat|Low|0|1A 52 54 53 20 43 4F 4D
+VLC Player Skin file|vlt|Low|0|1F 8B 08
+Compressed tape archive_2|tar.z|Mid|0|1F A0
+Google Earth Keyhole Placemark file|eta|Low|0|23 20 54 68 69 73 20 69 73 20 61 6E 20 4B 65 79
+NVIDIA Scene Graph binary file|nbf|Low|0|23 4E 42 46
+PDF file|pdf|Low|0|25 50 44 46
+PDF file|fdf|Low|0|25 50 44 46
+Symantec Wise Installer log|log|Low|0|2A 2A 2A 20 20 49 6E 73
+Compressed archive|lha|Mid|2|2D 6C 68
+Compressed archive|lzh|Mid|2|2D 6C 68
+RealAudio file|ra|Low|0|2E 52 4D 46 00 00 00 12
+Windows Event Viewer file|evt|Low|0|30 00 00 00 4C 66 4C 65
+MS Write file_1|wri|Low|0|31 BE
+7-Zip compressed file|7z|Mid|0|37 7A BC AF 27 1C
+Windows Visual Stylesheet|manifest|Low|0|3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D
+Adobe FrameMaker|fm|Low|0|3C 4D 61 6B 65 72 46 69
+Adobe FrameMaker|mif|Low|0|3C 4D 61 6B 65 72 46 69
+Analog Box (ABox) circuit files|abox2|Low|0|41 42 6F 78
+Steganos virtual secure drive|sle|Low|0|41 43 76
+RIFF Windows Audio|avi|Low|8|41 56 49 20 4C 49 53 54
+FreeArc compressed file|arc|Mid|0|41 72 43 01
+vCard|vcf|Low|0|42 45 47 49 4E 3A 56 43
+Mac Disk image (BZ2 compressed)|dmg|Mid|0|42 5A 68
+EA Interchange Format File (IFF)_3|iff|Low|0|43 41 54 20
+COM+ Catalog|clb|Low|0|43 4F 4D 2B
+Corel Photopaint file_1|cpt|Low|0|43 50 54 37 46 49 4C 45
+Win9x registry hive|dat|Mid|0|43 52 45 47
+Shockwave Flash file|swf|Low|0|43 57 53
+Amiga disk file|adf|Low|0|44 4F 53
+DST Compression|dst|Mid|0|44 53 54 62
+Apple ISO 9660-HFS hybrid CD image|iso|Mid|0|45 52 02 00 00
+EnCase Evidence File Format V2|ex01|Low|0|45 56 46 32 0D 0A 81
+QuickBooks backup|qbb|Low|0|45 86 00 00 06 00
+Flash video file|flv|Low|0|46 4C 56
+IFF ANIM file|anm|Low|0|46 4F 52 4D
+DAKX Compressed Audio|dax|Low|0|46 4F 52 4D 00
+Shockwave Flash player|swf|Low|0|46 57 53
+GIF file|gif|Low|0|47 49 46 38
+GIMP pattern file|pat|Low|0|47 50 41 54
+Install Shield compressed file|cab|Mid|0|49 53 63 28
+Install Shield compressed file|hdr|Mid|0|49 53 63 28
+Inter@ctive Pager Backup (BlackBerry file)|ipd|Low|0|49 6E 74 65 72 40 63 74 69 76 65 20 50 61 67 65
+AOL ART file_1|jg|Low|0|4A 47 03 0E
+KWAJ (compressed) file|none|Mid|0|4B 57 41 4A 88 F0 27 D1
+MS COFF relocatable object code|obj|Mid|0|4C 01
+Windows help file_3|gid|Low|0|4C 4E 02 00
+Windows help file_3|hlp|Low|0|4C 4E 02 00
+Powerpoint Packaged Presentation|ppz|Low|0|4D 53 43 46
+Windows 7 thumbnail_2|db|Low|0|49 4D 4D 4D 15 00 00 00
+Inno Setup Uninstall Log|dat|Low|0|49 6E 6E 6F 20 53 65 74
+JARCS compressed archive|jar|Mid|0|4A 41 52 43 53 00
+VMware 4 Virtual Disk|vmdk|Mid|0|4B 44 4D
+KGB archive|kgb|Mid|0|4B 47 42 5F 61 72 63 68
+Windows shortcut file|lnk|Low|0|4C 00 00 00 01 14 02 00
+DeluxePaint Animation|anm|Low|0|4C 50 46 20 00 01
+Merriam-Webster Pocket Dictionary|pdb|Low|0|4D 2D 57 20 50 6F 63 6B
+Microsoft-MSN MARC archive|mar|Mid|0|4D 41 52 43
+MATLAB v5 workspace|mat|Low|0|4D 41 54 4C 41 42 20 35 2E 30 20 4D 41 54 2D 66 69 6C 65
+Yamaha Synthetic music Mobile Application Format|mmf|Low|0|4D 4D 4D 44 00 00
+OneNote Package|onepkg|Low|0|4D 53 43 46
+MS Access Snapshot Viewer file|snp|Low|0|4D 53 43 46
+Microsoft Windows Imaging Format|wim|Low|0|4D 53 57 49 4D
+Milestones project management file_1|mls|Low|0|4D 56 32 31 34
+OLE object library|olb|Low|0|4D 5A
+Screen saver|scr|Low|0|4D 5A
+DirectShow filter|ax|Low|0|4D 5A 90 00 03 00 00 00
+Windows Media Player playlist|wpl|Low|84|4D 69 63 72 6F 73 6F 66 74 20 57 69 6E 64 6F 77 73 20 4D 65 64 69 61 20 50 6C 61 79 65 72 20 2D 2D 20
+StarOffice spreadsheet|sxc|Low|0|50 4B 03 04
+Mozilla Browser Archive|xpi|Low|0|50 4B 03 04
+eXact Packager Models|xpt|Low|0|50 4B 03 04
+Dreamcast Sound Format|dsf|Low|0|50 53 46 12
+Parrot Video Encapsulation|none|Low|0|50 61 56 45
+Qcow Disk Image|qemu|Low|0|51 46 49
+RIFF Qualcomm PureVoice|qcp|Low|8|51 4C 43 4D 66 6D 74 20
+Windows animated cursor|ani|Low|0|52 49 46 46
+CorelDraw document|cdr|Low|0|52 49 46 46
+Resource Interchange File Format|avi|Low|0|52 49 46 46
+Resource Interchange File Format|cda|Low|0|52 49 46 46
+Resource Interchange File Format|qcp|Low|0|52 49 46 46
+Resource Interchange File Format|rmi|Low|0|52 49 46 46
+Resource Interchange File Format|wav|Low|0|52 49 46 46
+Resource Interchange File Format|webp|Low|0|52 49 46 46
+Underground Audio|ast|Low|0|53 43 48 6C
+StuffIt archive|sit|Mid|0|53 49 54 21 00
+Visual Basic User-defined Control file|ctl|Low|0|56 45 52 53 49 4F 4E 20
+MapInfo Interchange Format file|mif|Low|0|56 65 72 73 69 6F 6E 20
+SPSS template|sct|Low|0|57 04 00 00 53 50 53 53 20 74 65 6D 70 6C 61 74
+RIFF WebP|webp|Low|8|57 45 42 50
+SMPTE DPX file (little endian)|dpx|Low|0|58 50 44 53
+MS Publisher|bdr|Low|0|58 54
+ZOO compressed archive|zoo|Mid|0|5A 4F 4F 20
+Flight Simulator Aircraft Configuration|cfg|Low|0|5B 66 6C 74 73 69 6D 2E
+Lotus AMI Pro document_2|sam|Low|0|5B 76 65 72 5D
+Intel PROset-Wireless Profile|p10|Low|0|64 00 00 00
+MS Visual Studio workspace file|dsw|Low|0|64 73 77 66 69 6C 65
+ISO Media-MPEG v4-iTunes AVC-LC|flv|Low|4|66 74 79 70 4D 34 56 20
+ISO Media-MPEG v4-iTunes AVC-LC|m4v|Low|4|66 74 79 70 4D 34 56 20
+ISO Base Media file (MPEG-4) v1|mp4|Low|4|66 74 79 70 69 73 6F 6D
+Win2000-XP printer spool file|shd|Low|0|67 49 00 00
+QuickTime movie_1|mov|Low|4|6D 6F 6F 76
+QuickTime movie_2|mov|Low|4|66 72 65 65
+QuickTime movie_5|mov|Low|4|70 6E 6F 74
+Sonic Foundry Acid Music File|ac|Low|0|72 69 66 66
+RealMedia metafile|ram|Low|0|72 74 73 70 3A 2F 2F
+Allegro Generic Packfile (uncompressed)|dat|Low|0|73 6C 68 2E
+PowerBASIC Debugger Symbols|pdb|Low|0|73 7A 65 7A
+PathWay Map file|prc|Low|60|74 42 4D 50 4B 6E 57 72
+TrueType font|ttf|Low|0|74 72 75 65 00
+MacOS X image file|dmg|Low|0|78 01 73 0D 62 62 60
+Huskygram Poem or Singer embroidery|csd|Low|0|7C 4B C3 74 E1 C8 53 A4 79 B9 01 1D FC 4F DD 13
+Easy Street Draw diagram file|esd|Low|0|7E 45 53 44 77 F6 85 3E BF 6A D2 11 45 61 73 79 20 53 74 72 65 65 74 20 44 72 61 77
+Dreamcast audio|adx|Low|0|80 00 00 20 03 12 04
+Outlook Express address book (Win95)|wab|Low|0|81 32 84 C1 85 05 D0 11
+OLE-SPSS-Visual C++ library file|tlb|Low|0|4D 53 46 54 02 00 01 00
+Sony Compressed Voice File|cdr|Low|0|4D 53 5F 56 4F 49 43 45
+Sony Compressed Voice File|dvf|Low|0|4D 53 5F 56 4F 49 43 45
+Sony Compressed Voice File|msv|Low|0|4D 53 5F 56 4F 49 43 45
+ActiveX-OLE Custom Control|ocx|Low|0|4D 5A
+ZoneAlarm data file|zap|Low|0|4D 5A 90 00 03 00 00 00 04 00 00 00 FF FF
+VMapSource GPS Waypoint Database|gdb|Low|0|4D 73 52 63 66
+TomTom traffic data|dat|Low|0|4E 41 56 54 52 41 46 46
+MS Windows journal|jnt|Low|0|4E 42 2A 00
+MS Windows journal|jtp|Low|0|4E 42 2A 00
+National Imagery Transmission Format file|ntf|Low|0|4E 49 54 46 30
+Visio-DisplayWrite 4 text file|dw4|Low|0|4F 7B
+Quicken QuickFinder Information File|idx|Low|0|50 00 00 00 20 00 00 00
+Windows memory dump|dmp|Low|0|50 41 47 45 44 55
+PAX password protected bitmap|pax|Low|0|50 41 58
+PGP disk image|pgd|Mid|0|50 47 50 64 4D 41 49 4E
+PKZIP archive_1|zip|Mid|0|50 4B 03 04
+OpenDocument template|odt|Low|0|50 4B 03 04
+OpenDocument template|odp|Low|0|50 4B 03 04
+OpenDocument template|ott|Low|0|50 4B 03 04
+Open Publication Structure eBook|epub|Low|0|50 4B 03 04 0A 00 02 00
+PKZIP archive_2|zip|Mid|0|50 4B 05 06
+PKZIP archive_3|zip|Mid|0|50 4B 07 08
+PKLITE archive|zip|Mid|30|50 4B 4C 49 54 45
+Puffer encrypted archive|puf|Mid|0|50 55 46 58
+R saved work space|rdata|Low|0|52 44 58 32 0A
+WinNT Registry-Registry Undo files|reg|Mid|0|52 45 47 45 44 49 54
+WinNT Registry-Registry Undo files|sud|Mid|0|52 45 47 45 44 49 54
+4X Movie video|4xm|Low|0|52 49 46 46
+RIFF Windows MIDI|rmi|Low|8|52 4D 49 44 64 61 74 61
+Img Software Bitmap|img|Low|0|53 43 4D 49
+Harvard Graphics presentation|shw|Low|0|53 48 4F 57
+Sietronics CPI XRD document|cpi|Low|0|53 49 45 54 52 4F 4E 49
+StorageCraft ShadowProtect backup file|spf|Low|0|53 50 46 49 00
+MultiBit Bitcoin blockchain file|spvb|Low|0|53 50 56 42
+SQLite database file|db|Low|0|53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00
+QBASIC SZDD file|none|Mid|0|53 5A 20 88 F0 27 33 D1
+Wii-GameCube|thp|Low|0|54 48 50 00
+GNU Info Reader file|info|Low|0|54 68 69 73 20 69 73 20
+UFO Capture map file|dat|Low|0|55 46 4F 4F 72 62 69 74
+RIFF Windows Audio|wav|Low|8|57 41 56 45 66 6D 74 20
+XPCOM libraries|xpt|Low|0|58 50 43 4F 4D 0A 54 79
+Macromedia Shockwave Flash|swf|Low|0|5A 57 53
+Visual C++ Workbench Info File|vcw|Low|0|5B 4D 53 56 43
+VocalTec VoIP media file|vmd|Low|0|5B 56 4D 44 5D
+Microsoft Code Page Translation file|cpx|Low|0|5B 57 69 6E 64 6F 77 73
+WinAmp Playlist|pls|Low|0|5B 70 6C 61 79 6C 69 73 74 5D
+UUencoded file|none|Low|0|62 65 67 69 6E
+Binary property list (plist)|none|Low|0|62 70 6C 69 73 74
+Macintosh encrypted Disk image (v1)|dmg|Mid|0|63 64 73 61 65 6E 63 72
+Photoshop Custom Shape|csh|Low|0|63 75 73 68 00 00 00 02
+Audacity audio file|au|Low|0|64 6E 73 2E
+WinNT printer spool file|shd|Low|0|66 49 00 00
+Free Lossless Audio Codec file|flac|Low|0|66 4C 61 43 00 00 00 22
+QuickTime movie_7|mov|Low|4|66 74 79 70 71 74 20 20
+QuickTime movie_4|mov|Low|4|77 69 64 65
+QuickTime movie_6|mov|Low|4|73 6B 69 70
+PalmOS SuperMemo|pdb|Low|0|73 6D 5F
+Qimage filter|flt|Low|0|76 32 30 30 33 2E 31 30
+Google Drive Drawing link|gdraw|Low|0|7B 22 75 72 6C 22 3A 20 22 68 74 74 70 73 3A 2F
+Kodak Cineon image|cin|Low|0|80 2A 5F D7
+PNG image|png|Low|0|89 50 4E 47 0D 0A 1A 0A
+High Efficiency Image Container (HEIC)_2|heic|Low|0|00 00 00 20 66 74 79 70 68 65 69 63
+3GPP multimedia files|3gp|Low|0|00 00 00 14 66 74 79 70
+3rd Generation Partnership Project 3GPP|3gg|Low|0|00 00 00 14 66 74 79 70
+3rd Generation Partnership Project 3GPP|3gp|Low|0|00 00 00 14 66 74 79 70
+3rd Generation Partnership Project 3GPP|3g2|Low|0|00 00 00 14 66 74 79 70
+MPEG video file|mpg|Low|0|00 00 01 B3
+Lotus 1-2-3 (v3)|wk3|Low|0|00 00 1A 00 00 10 04 00
+Lotus 1-2-3 (v4-v5)|wk4|Low|0|00 00 1A 00 02 10 04 00
+Lotus 1-2-3 (v4-v5)|wk5|Low|0|00 00 1A 00 02 10 04 00
+Lotus 1-2-3 (v9)|123|Low|0|00 00 1A 00 05 10 04
+Quark Express (Intel)|qxd|Low|0|00 00 49 49 58 50 52
+Quark Express (Motorola)|qxd|Low|0|00 00 4D 4D 58 50 52
+Windows Help file_1|hlp|Low|6|00 00 FF FF FF FF
+Microsoft Access 2007|accdb|Low|0|00 01 00 00 53 74 61 6E 64 61 72 64 20 41 43 45 20 44 42
+Microsoft Access|mdb|Low|0|00 01 00 00 53 74 61 6E 64 61 72 64 20 4A 65 74 20 44 42
+Paessler PRTG Monitoring System|db|Low|0|00 3B 05 00 01 00 00 00
+SQL Data Base|mdf|Low|0|01 0F 00 00
+Silicon Graphics RGB Bitmap|rgb|Low|0|01 DA 01 01 00 03
+Quicken price history|qph|Low|0|03 00 00 00
+DesignTools 2D Design file|dtd|Low|0|07 64 74 32 64 64 74 64
+Monochrome Picture TIFF bitmap|mp|Low|0|0C ED
+Nero CD compilation|nri|Low|0|0E 4E 65 72 6F 49 53 4F
+DeskMate Worksheet|wks|Low|0|0E 57 4B 53
+Sibelius Music - Score|sib|Low|0|0F 53 49 42 45 4C 49 55 53
+LH archive (old vers.-type 1)|arc|Mid|0|1A 02
+LH archive (old vers.-type 4)|arc|Mid|0|1A 08
+GZIP archive file|gz|Mid|0|1F 8B 08
+Synology router configuration backup file|dss|Low|0|1F 8B 08 00
+Unix archiver (ar)-MS Program Library Common Object File Format (COFF)|lib|Low|0|21 3C 61 72 63 68 3E 0A
+Adaptive Multi-Rate ACELP Codec (GSM)|amr|Low|0|23 21 41 4D 52
+VBScript Encoded script|vbe|High|0|23 40 7E 5E
+Brother-Babylock-Bernina Home Embroidery|pes|Low|0|23 50 45 53 30
+RealAudio streaming media|ra|Low|0|2E 72 61 FD 00
+MS security catalog file|cat|Low|0|30
+Windows Media Audio-Video File|asf|Low|0|30 26 B2 75 8E 66 CF 11
+Windows Media Audio-Video File|wma|Low|0|30 26 B2 75 8E 66 CF 11
+Windows Media Audio-Video File|wmv|Low|0|30 26 B2 75 8E 66 CF 11
+cpio archive|cpio|Mid|0|30 37 30 37 30
+Pfaff Home Embroidery|pcs|Low|0|32 03 10 00 00 00 00 00 00 00 80 00 00 00 FF 00
+BASE85 file|b85|Low|0|3C 7E 36 3C 5C 25 5F 30 67 53 71 68 3B
+Quatro Pro for Windows 7.0|wb3|Low|24|3E 00 03 00 FE FF 09 00 06
+Generic AutoCAD drawing|dwg|Low|0|41 43 31 30
+AOL parameter-info files|pfc|Low|0|41 43 53 44
+Harvard Graphics symbol graphic|syw|Low|0|41 4D 59 4F
+AOL and AIM buddy list|bag|Low|0|41 4F 4C 20 46 65 65 64
+AOL user configuration|idx|Low|0|41 4F 4C 44 42
+Bitmap image|bmp|Low|0|42 4D
+Bitmap image|dib|Low|0|42 4D
+RIFF CD audio|cda|Low|8|43 44 44 41 66 6D 74 20
+Windows 7 thumbnail|db|Low|0|43 4D 4D 4D 15 00 00 00
+WhereIsIt Catalog|ctf|Low|0|43 61 74 61 6C 6F 67 20
+IE History file|dat|Low|0|43 6C 69 65 6E 74 20 55
+PowerISO Direct-Access-Archive image|daa|Mid|0|44 41 41 00 00 00 00 00
+Amiga DiskMasher compressed archive|dms|Mid|0|44 4D 53 21
+DVR-Studio stream file|dvr|Low|0|44 56 44
+Elite Plus Commander game file|cdr|Low|0|45 4C 49 54 45 20 43 6F
+NTFS MFT (FILE)|none|Mid|0|46 49 4C 45
+EA Interchange Format File (IFF)_1|iff|Low|0|46 4F 52 4D
+Show Partner graphics file|gx2|Low|0|47 58 32
+Genetec video archive|g64|Low|0|47 65 6E 65 74 65 63 20 4F 6D 6E 69 63 61 73 74
+TIFF file_1|tif|Low|0|49 20 49
+TIFF file_1|tiff|Low|0|49 20 49
+Canon RAW file|crw|Low|0|49 49 1A 00 00 00 48 45
+TIFF file_2|tif|Low|0|49 49 2A 00
+TIFF file_2|tiff|Low|0|49 49 2A 00
+MS Reader eBook|lit|Low|0|49 54 4F 4C 49 54 4C 53
+AOL ART file_2|jg|Low|0|4A 47 04 0E
+Win9x printer spool file|shd|Low|0|4B 49 00 00
+Tajima embroidery|dst|Low|0|4C 41 3A
+High Efficiency Image Container (HEIC)_1|avif|Low|0|00 00 00
+3rd Generation Partnership Project 3GPP2|3gg|Low|0|00 00 00 20 66 74 79 70
+3rd Generation Partnership Project 3GPP2|3gp|Low|0|00 00 00 20 66 74 79 70
+3rd Generation Partnership Project 3GPP2|3g2|Low|0|00 00 00 20 66 74 79 70
+Windows cursor|cur|Low|0|00 00 02 00
+Wii images container|tpl|Low|0|00 20 AF 30
+TrueType font file|ttf|Low|0|00 01 00 00 00
+Palm Address Book Archive|aba|Low|0|00 01 42 41
+Palm DateBook Archive|dba|Low|0|00 01 42 44
+Netscape Communicator (v4) mail folder|snm|Low|0|00 1E 84 90 00 00 00 00
+The Bat! Message Base Index|tbi|Low|0|01 01 47 19 A4 00 00 00 00 00 00 00
+Novell LANalyzer capture file|tr1|Low|0|01 10
+Micrografx vector graphic file|drw|Low|0|01 FF 02 04 03 02
+Approach index file|adx|Low|0|03 00 00 00 41 50 50 52
+Digital Speech Standard (v3)|dss|Low|0|03 64 73 73
+INFO2 Windows recycle bin_2|none|Low|0|05 00 00 00
+Adobe InDesign|indd|Low|0|06 06 ED F5 D8 1D 46 E5 BD 31 EF E7 FE 74 B7 1D
+Material Exchange Format|mxf|Low|0|06 0E 2B 34 02 05 01 01 0D 01 02 01 01 02
+Excel spreadsheet subheader_1|xls|Low|512|09 08 10 00 00 06 05 00
+ZSOFT Paintbrush file_3|pcx|Low|0|0A 05 01 01
+MultiBit Bitcoin wallet file|wallet|Low|0|0A 16 6F 72 67 2E 62 69 74 63 6F 69 6E 2E 70 72
+DeskMate Document|doc|Low|0|0D 44 4F 43
+Easy CD Creator 5 Layout file|cl5|Low|0|10 00 00 00
+Windows prefetch file|pf|Low|0|11 00 00 00 53 43 43 41
+WinPharoah capture file|eth|Low|0|1A 35 01 00
+WebM video file|webm|Low|0|1A 45 DF A3
+Matroska stream file_1|mkv|Low|0|1A 45 DF A3
+WordStar Version 5.0-6.0 document|ws|Low|0|1D 7D
+Compressed tape archive_1|tar.z|Mid|0|1F 9D 90
+MapInfo Sea Chart|bsb|Low|0|21
+NOAA Raster Navigation Chart (RNC) file|bsb|Low|0|21 0D 0A 43 52 52 2F 54 68 69 73 20 65 6C 65 63
+Radiance High Dynamic Range image file|hdr|Low|0|23 3F 52 41 44 49 41 4E
+BinHex 4 Compressed Archive|hqx|Mid|0|28 54 68 69 73 20 66 69
+RealPlayer video file (V11+)|ivr|Low|0|2E 52 45 43
+Thunderbird-Mozilla Mail Summary File|msf|Low|0|2F 2F 20 3C 21 2D 2D 20 3C 6D 64 62 3A 6D 6F 72 6B 3A 7A
+GEnealogical Data COMmunication (GEDCOM) file|ged|Low|0|30 20 48 45 41 44
+National Transfer Format Map|ntf|Low|0|30 31 4F 52 44 4E 41 4E
+MS Write file_2|wri|Low|0|32 BE
+BizTalk XML-Data Reduced Schema|xdr|Low|0|3C
+Windows Script Component|wsc|Mid|0|3C 3F
+MMC Snap-in Control file|msc|Mid|0|3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 3F 3E 0D 0A 3C 4D 4D 43 5F 43 6F 6E 73 6F 6C 65 46 69 6C 65 20 43 6F 6E 73 6F 6C 65 56 65 72 73 69 6F 6E 3D 22
+Google Earth Keyhole Overlay file|eta|Low|0|3C 4B 65 79 68 6F 6C 65 3E
+EndNote Library File|enl|Low|32|40 40 40 20 00 00 40 40 40 40
+AOL config files|abi|Low|0|41 4F 4C
+AOL config files|aby|Low|0|41 4F 4C
+AOL config files|bag|Low|0|41 4F 4C
+AOL config files|idx|Low|0|41 4F 4C
+AOL config files|ind|Low|0|41 4F 4C
+AOL config files|pfc|Low|0|41 4F 4C
+AOL address book index|abi|Low|0|41 4F 4C 49 4E 44 45 58
+NTFS MFT (BAAD)|none|Mid|0|42 41 41 44
+Google Chrome dictionary file|bdic|Low|0|42 44 69 63
+Speedtouch router firmware|bin|Low|0|42 4C 49 32 32 33
+Speedtouch router firmware|bli|Low|0|42 4C 49 32 32 33
+Speedtouch router firmware|rbi|Low|0|42 4C 49 32 32 33
+Better Portable Graphics|bpg|Low|0|42 50 47 FB
+Puffer ASCII encrypted archive|apuf|Mid|0|42 65 67 69 6E 20 50 75 66 66 65 72
+RagTime document|rtd|Low|0|43 23 2B 44 A4 43 4D A5
+Corel Binary metafile|clb|Low|0|43 4D 58 31
+Corel Photopaint file_2|cpt|Low|0|43 50 54 46 49 4C 45
+Crush compressed archive|cru|Mid|0|43 52 55 53 48 20 76
+Google Chrome Extension|crx|Low|0|43 72 32 34
+Google Chromium patch update|crx|Low|0|43 72 4F 44
+Creative Voice|voc|Low|0|43 72 65 61 74 69 76 65 20 56 6F 69 63 65 20 46
+DAX Compressed CD image|dax|Mid|0|44 41 58 00
+Expert Witness Compression Format|e01|Low|0|45 56 46 09 0D 0A FF 00
+Windows Vista event log|evtx|Low|0|45 6C 66 46 69 6C 65 00
+MS Fax Cover Sheet|cpe|Low|0|46 41 58 43 4F 56 45 52
+Fiasco database definition file|fdb|Low|0|46 44 42 48 00
+Generic e-mail_2|eml|Low|0|46 72 6F 6D
+Harvard Graphics presentation file|sh3|Low|0|48 48 47 42 31
+MS Compiled HTML Help File|chi|Low|0|49 54 53 46
+MS Compiled HTML Help File|chm|Low|0|49 54 53 46
+MAr compressed archive|mar|Mid|0|4D 41 72 30 00
+Milestones project management file|mls|Low|0|4D 49 4C 45 53
+TIFF file_3|tif|Low|0|4D 4D 00 2A
+TIFF file_3|tiff|Low|0|4D 4D 00 2A
+VMware BIOS state file|nvram|Low|0|4D 52 56 4E
+Yamaha Piano|pcs|Low|0|4D 54 68 64
+Milestones project management file_2|mls|Low|0|4D 56 32 43
+Library cache file|ax|Low|0|4D 5A
+Font file|fon|Low|0|4D 5A
+VisualBASIC application|vbx|Low|0|4D 5A
+Windows virtual device drivers|vxd|Low|0|4D 5A
+Windows virtual device drivers|386|Low|0|4D 5A
+Audition graphic filter|flt|Low|0|4D 5A 90 00 03 00 00 00
+MS C++ debugging symbols file|pdb|Low|0|4D 69 63 72 6F 73 6F 66 74 20 43 2F 43 2B 2B 20
+Visual Studio .NET file|sln|Low|0|4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C
+Agent newsreader character map|cod|Low|0|4E 61 6D 65 3A 20
+1Password 4 Cloud Keychain|attachment|Mid|0|4F 50 43 4C 44 41 54
+Psion Series 3 Database|dbf|Low|0|4F 50 4C 44 61 74 61 62
+OpenType font|otf|Low|0|4F 54 54 4F 00
+ChromaGraph Graphics Card Bitmap|img|Low|0|50 49 43 54 00 08
+MS Office Open XML Format Document|docx|Low|0|50 4B 03 04
+MS Office Open XML Format Document|pptx|Low|0|50 4B 03 04
+MS Office Open XML Format Document|xlsx|Low|0|50 4B 03 04
+Java archive_1|jar|Low|0|50 4B 03 04
+Google Earth session file|kmz|Low|0|50 4B 03 04
+Microsoft Open XML paper specification|oxps|Low|0|50 4B 03 04
+OpenOffice documents|sxc|Low|0|50 4B 03 04
+OpenOffice documents|sxd|Low|0|50 4B 03 04
+OpenOffice documents|sxi|Low|0|50 4B 03 04
+OpenOffice documents|sxw|Low|0|50 4B 03 04
+XML paper specification file|xps|Low|0|50 4B 03 04
+Java archive_2|jar|Low|0|50 4B 03 04 14 00 08 00
+Windows Program Manager group file|grp|Low|0|50 4D 43 43
+Norton Disk Doctor undo file|dat|Low|0|50 4E 43 49 55 4E 44 4F
+Quicken data file|abd|Low|0|51 57 20 56 65 72 2E 20
+Quicken data file|qsd|Low|0|51 57 20 56 65 72 2E 20
+Shareaza (P2P) thumbnail|dat|Low|0|52 41 5A 41 54 44 42 31
+Antenna data file|ad|Low|0|52 45 56 4E 55 4D 3A 2C
+Corel Presentation Exchange metadata|cmx|Low|0|52 49 46 46
+WinNT Netmon capture file|cap|Low|0|52 54 53 53
+WinRAR compressed archive|rar|Mid|0|52 61 72 21 1A 07 00
+Generic e-mail_1|eml|Low|0|52 65 74 75 72 6E 2D 50
+Flexible Image Transport System (FITS) file|fits|Low|0|53 49 4D 50 4C 45 20 20 3D 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 54
+SmartDraw Drawing file|sdr|Low|0|53 4D 41 52 54 44 52 57
+StuffIt compressed archive|sit|Mid|0|53 74 75 66 66 49 74 20
+SuperCalc worksheet|cal|Low|0|53 75 70 65 72 43 61 6C
+Unicode extensions|uce|Low|0|55 43 45 58
+UFA compressed archive|ufa|Mid|0|55 46 41 C6 D2 C1
+Measurement Data Format file|mf4|Low|0|55 6E 46 69 6E 4D 46
+Visual C PreCompiled header|pch|Low|0|56 43 50 43 48 30
+Lotus WordPro file|lwp|Low|0|57 6F 72 64 50 72 6F
+Exchange e-mail|eml|Low|0|58 2D
+Packet sniffer files|cap|Low|0|58 43 50 00
+Jar archive|jar|Low|0|5F 27 A8 89
+Virtual PC HD image|vhd|Low|0|63 6F 6E 65 63 74 69 78
+Dalvik (Android) executable file|dex|Mid|0|64 65 78 0A
+Macintosh encrypted Disk image (v2)|dmg|Mid|0|65 6E 63 72 63 64 73 61
+MPEG-4 video file_2|mp4|Low|4|66 74 79 70 4D 53 4E 56
+MPEG-4 video-QuickTime file|m4v|Low|4|66 74 79 70 6D 70 34 32
+MacOS icon file|icns|Low|0|69 63 6E 73
+Skype user data file|dbb|Low|0|6C 33 33 6C
+QuickTime movie_3|mov|Low|4|6D 64 61 74
+Internet Explorer v11 Tracking Protection List|tpl|Low|0|6D 73 46 69 6C 74 65 72 4C 69 73 74
+SMS text (SIM)|none|Low|0|6F 3C
+WinNT registry file|dat|Mid|0|72 65 67 66
+OpenEXR bitmap image|exr|Low|0|76 2F 31 01
+Web Open Font Format 2|woff2|Low|0|77 4F 46 32
+ZoomBrowser Image Index|info|Low|0|7A 62 65 78
+Windows application log|lgc|Low|0|7B 0D 0A 6F 20
+Windows application log|lgd|Low|0|7B 0D 0A 6F 20
+MS WinMobile personal note|pwi|Low|0|7B 5C 70 77 69
+Corel Paint Shop Pro image|psp|Low|0|7E 42 4B 00
+Digital Watchdog DW-TP-500G audio|img|Low|0|7E 74 2C 01 50 70 02 4D 52
+EA Interchange Format File (IFF)_2|iff|Low|0|4C 49 53 54
+Logical File Evidence Format|e01|Low|0|4C 56 46 09 0D 0A FF 00
+Mozilla archive|mar|Low|0|4D 41 52 31 00
+TargetExpress target file|mte|Low|0|4D 43 57 20 54 65 63 68 6E 6F 67 6F 6C 69 65 73
+Windows dump file|dmp|Low|0|4D 44 4D 50 93 A7
+Windows dump file|hdmp|Low|0|4D 44 4D 50 93 A7
+Skype localization data file|mls|Low|0|4D 4C 53 57
+TIFF file_4|tif|Low|0|4D 4D 00 2B
+TIFF file_4|tiff|Low|0|4D 4D 00 2B
+Microsoft cabinet file|cab|Mid|0|4D 53 43 46
+MIDI sound file|mid|Low|0|4D 54 68 64
+MIDI sound file|midi|Low|0|4D 54 68 64
+CD Stomper Pro label file|dsn|Low|0|4D 56
+Windows-DOS executable file|com|High|0|4D 5A
+Windows-DOS executable file|dll|High|0|4D 5A
+Windows-DOS executable file|drv|High|0|4D 5A
+Windows-DOS executable file|exe|High|0|4D 5A
+Windows-DOS executable file|pif|High|0|4D 5A
+Windows-DOS executable file|qts|High|0|4D 5A
+Windows-DOS executable file|qtx|High|0|4D 5A
+Windows-DOS executable file|sys|High|0|4D 5A
+MS audio compression manager driver|acm|Low|0|4D 5A
+Control panel application|cpl|Mid|0|4D 5A
+Acrobat plug-in|api|Low|0|4D 5A 90 00 03 00 00 00
+NES Sound file|nsf|Low|0|4E 45 53 4D 1A 01
+Ogg Vorbis Codec compressed file|oga|Low|0|4F 67 67 53 00 02 00 00
+Ogg Vorbis Codec compressed file|ogg|Low|0|4F 67 67 53 00 02 00 00
+Ogg Vorbis Codec compressed file|ogv|Low|0|4F 67 67 53 00 02 00 00
+Ogg Vorbis Codec compressed file|ogx|Low|0|4F 67 67 53 00 02 00 00
+Portable Graymap Graphic|pgm|Low|0|50 35 0A
+Quake archive file|pak|Mid|0|50 41 43 4B
+PestPatrol data-scan strings|dat|Low|0|50 45 53 54
+Android package|apk|Mid|0|50 4B 03 04
+MacOS X Dashboard Widget|zip|Low|0|50 4B 03 04
+KWord document|kwd|Low|0|50 4B 03 04
+Windows Media compressed skin file|wmz|Low|0|50 4B 03 04
+ZLock Pro encrypted ZIP|zip|Mid|0|50 4B 03 04 14 00 01 00
+MS Office 2007 documents|docx|Low|0|50 4B 03 04 14 00 06 00
+MS Office 2007 documents|pptx|Low|0|50 4B 03 04 14 00 06 00
+MS Office 2007 documents|xlsx|Low|0|50 4B 03 04 14 00 06 00
+PKSFX self-extracting archive|zip|Mid|526|50 4B 53 70 58
+Microsoft Windows User State Migration Tool|pmoccmoc|Low|0|50 4D 4F 43 43 4D 4F 43
+Quicken data|qel|Low|92|51 45 4C 20
+Outlook-Exchange message subheader|msg|Low|512|52 00 6F 00 6F 00 74 00 20 00 45 00 6E 00 74 00 72 00 79 00
+Video CD MPEG movie|dat|Low|0|52 49 46 46
+Micrografx Designer graphic|ds4|Low|0|52 49 46 46
+Windows prefetch|pf|Low|4|53 43 43 41
+SMPTE DPX (big endian)|sdpx|Low|0|53 44 50 58
+DB2 conversion file|cnv|Low|0|53 51 4C 4F 43 4F 4E 56
+SZDD file format|none|Mid|0|53 5A 44 44 88 F0 27 33
+Walkman MP3 file|dat|Low|0|57 4D 4D 50
+WordStar for Windows file|ws2|Low|0|57 53 32 30 30 30
+WinZip compressed archive|zip|Mid|29152|57 69 6E 5A 69 70
+MS Exchange configuration file|ecf|Low|0|5B 47 65 6E 65 72 61 6C
+Dial-up networking file|dun|Low|0|5B 50 68 6F 6E 65 5D
+Lotus AMI Pro document_1|sam|Low|0|5B 56 45 52 5D
+Husqvarna Designer|hus|Low|0|5D FC C8 00
+EnCase case file|cas|Low|0|5F 43 41 53 45 5F
+EnCase case file|cbk|Low|0|5F 43 41 53 45 5F
+Compressed archive file|arj|Mid|0|60 EA
+UUencoded BASE64 file|b64|Low|0|62 65 67 69 6E 2D 62 61 73 65 36 34
+Apple Core Audio File|caf|Low|0|63 61 66 66
+Torrent file|torrent|Low|0|64 38 3A 61 6E 6E 6F 75 6E 63 65
+MPEG-4 video file_1|mp4|Low|4|66 74 79 70 33 67 70 35
+Apple Lossless Audio Codec file|m4a|Low|4|66 74 79 70 4D 34 41 20
+GIMP file|xcf|Low|0|67 69 6D 70 20 78 63 66
+Win Server 2003 printer spool file|shd|Low|0|68 49 00 00
+MultiBit Bitcoin wallet information|info|Low|0|6D 75 6C 74 69 42 69 74 2E 69 6E 66 6F
+1Password 4 Cloud Keychain encrypted data|none|Mid|0|6F 70 64 61 74 61 30 31
+Allegro Generic Packfile (compressed)|dat|Low|0|73 6C 68 21
+STL (STereoLithography) file|stl|Low|0|73 6F 6C 69 64
+CALS raster bitmap|cal|Low|0|73 72 63 64 6F 63 69 64
+Tape Archive|tar|Mid|257|75 73 74 61 72
+Web Open Font Format|woff|Low|0|77 4F 46 46
+eXtensible ARchive file|xar|Mid|0|78 61 72 21
+Rich Text Format|rtf|Low|0|7B 5C 72 74 66 31
+ELF executable|none|High|0|7F 45 4C 46
+WordPerfect text|wpf|Low|0|81 CD AB
+Relocatable object code|obj|Low|0|80
+MS Answer Wizard|aw|Low|0|8A 01 09 00 00 00 E1 08
+tcpdump (libpcap) capture file|none|Low|0|A1 B2 C3 D4
+Extended tcpdump (libpcap) capture file|none|Low|0|A1 B2 CD 34
+Quicken data|qdf|Low|0|AC 9E BD 8F 00 00
+Jeppesen FliteLog file|lbk|Low|0|C8 00 79 00
+Acronis True Image_2|tib|Low|0|CE 24 B9 A2 20 00 00 00
+OS X ABI Mach-O binary (64-bit reverse)|none|High|0|CF FA ED FE
+Visual Studio Solution User Options file|sou|Low|0|D0 CF 11 E0 A1 B1 1A E1
+SPSS output file|spo|Low|0|D0 CF 11 E0 A1 B1 1A E1
+WinPharoah filter file|ftr|Low|0|D2 0A 00 00
+MS OneNote note|one|Low|0|E4 52 5C 7B 8C D8 A7 4D
+Windows executable file_3|com|High|0|EB
+Windows executable file_3|sys|High|0|EB
+GEM Raster file|img|Low|0|EB 3C 90 2A
+BitLocker boot sector (Vista)|none|Mid|0|EB 52 90 2D 46 56 45 2D
+BitLocker boot sector (Win7)|none|Mid|0|EB 58 90 2D 46 56 45 2D
+RedHat Package Manager|rpm|Mid|0|ED AB EE DB
+FAT32 File Allocation Table_1|none|Low|0|F8 FF FF 0F FF FF FF 0F
+FAT32 File Allocation Table_2|none|Low|0|F8 FF FF 0F FF FF FF FF
+Thumbs.db subheader|db|Low|512|FD FF FF FF
+Excel spreadsheet subheader_5|xls|Low|512|FD FF FF FF 23
+JavaKeyStore|none|Mid|0|FE ED FE ED
+MPEG-4 AAC audio|aac|Low|0|FF F1
+PGP public keyring|pkr|Low|0|99 01
+Outlook address file|wab|Low|0|9C CB CB 8D 13 75 D2 11
+Access Data FTK evidence|dat|Low|0|A9 0D 00 00 00 00 00 00
+Khronos texture file|ktx|Low|0|AB 4B 54 58 20 31 31 BB 0D 0A 1A 0A
+Java serialization data|none|Low|0|AC ED
+PCX bitmap|dcx|Low|0|B1 68 DE 3A
+Acronis True Image_1|tib|Low|0|B4 6E 68 44
+Windows calendar|cal|Low|0|B5 A2 B0 B3 B3 B0 A5 B5
+MS Agent Character file|acs|Low|0|C3 AB CD AB
+Outlook Express e-mail folder|dbx|Low|0|CF AD 12 FE
+Lotus-IBM Approach 97 file|apr|Low|0|D0 CF 11 E0 A1 B1 1A E1
+MSWorks database file|db|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Common Console Document|msc|Mid|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Installer package|msi|Mid|0|D0 CF 11 E0 A1 B1 1A E1
+ArcMap GIS project file|mxd|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Developer Studio File Options file|opt|Low|0|D0 CF 11 E0 A1 B1 1A E1
+MS Publisher file|pub|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Word 2.0 file|doc|Low|0|DB A5 2D 00
+eFax file|efx|Low|0|DC FE
+Win98 password file|pwl|Mid|0|E3 82 85 96
+Windows executable file_1|com|High|0|E8
+Windows executable file_1|sys|High|0|E8
+Bitcoin-Qt blockchain block file|dat|Low|0|F9 BE B4 D9
+MS Publisher subheader|pub|Low|512|FD 37 7A 58 5A 00
+MS Publisher file subheader|pub|Low|512|FD FF FF FF 02
+QuickBooks Portable Company File|qbm|Low|512|FD FF FF FF 04
+Excel spreadsheet subheader_4|xls|Low|512|FD FF FF FF 22
+OS X ABI Mach-O binary (32-bit)|none|High|0|FE ED FA CE
+OS X ABI Mach-O binary (64-bit)|none|High|0|FE ED FA CF
+UTF-16-UCS-2 file|none|Low|0|FE FF
+Works for Windows spreadsheet|wks|Low|0|FF 00 02 00 04 04 05 54
+QuickReport Report|qrp|Low|0|FF 0A 00
+WordPerfect text and graphics|wp|Low|0|FF 57 50 43
+WordPerfect text and graphics|wpd|Low|0|FF 57 50 43
+WordPerfect text and graphics|wpg|Low|0|FF 57 50 43
+WordPerfect text and graphics|wpp|Low|0|FF 57 50 43
+WordPerfect text and graphics|wp5|Low|0|FF 57 50 43
+WordPerfect text and graphics|wp6|Low|0|FF 57 50 43
+JPEG-EXIF-SPIFF images|jfif|Low|0|FF D8 FF
+JPEG-EXIF-SPIFF images|jpe|Low|0|FF D8 FF
+JPEG-EXIF-SPIFF images|jpeg|Low|0|FF D8 FF
+JPEG-EXIF-SPIFF images|jpg|Low|0|FF D8 FF
+MPEG-2 AAC audio|aac|Low|0|FF F9
+PGP secret keyring_2|skr|Low|0|95 01
+JBOG2 image file|jb2|Low|0|97 4A 42 32 0D 0A 1A 0A
+PowerPoint presentation subheader_3|ppt|Low|512|A0 46 1D F0
+BGBlitz position database file|pdb|Low|0|AC ED 00 05 73 72 00 12
+Win95 password file|pwl|Mid|0|B0 4D 46 43
+Palm Desktop DateBook|dat|Low|0|BE BA FE CA 0F 50 61 6C 6D 53 47 20 44 61 74 61
+Nokia phone backup file|nbu|Low|0|CC 52 33 FC E9 2C 18 48 AF E3 36 30 1A 39 40 06
+NAV quarantined virus file|none|Low|0|CD 20 AA AA 02 00 00 00
+OS X ABI Mach-O binary (32-bit reverse)|none|High|0|CE FA ED FE
+Perfect Office document|doc|Low|0|CF 11 E0 A1 B1 1A E1 00
+CaseWare Working Papers|ac_|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Installer Patch|msp|Mid|0|D0 CF 11 E0 A1 B1 1A E1
+AOL history typed URL files|arl|Low|0|D4 2A
+AOL history typed URL files|aut|Low|0|D4 2A
+Windows graphics metafile|wmf|Low|0|D7 CD C6 9A
+Word document subheader|doc|Low|512|EC A5 C1 00
+Windows Script Component (UTF-8)_2|wsc|Mid|0|EF BB BF 3C 3F
+YouTube Timed Text (subtitle) file|ytt|Low|0|EF BB BF 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E
+FAT12 File Allocation Table|none|Low|0|F0 FF FF
+FAT16 File Allocation Table|none|Low|0|F8 FF FF FF
+XZ archive|xz|Mid|0|FD 37 7A 58 5A 00
+PowerPoint presentation subheader_4|ppt|Low|512|FD FF FF FF 0E 00 00 00
+Excel spreadsheet subheader_3|xls|Low|512|FD FF FF FF 1F
+Developer Studio subheader|opt|Low|512|FD FF FF FF 20
+Excel spreadsheet subheader_6|xls|Low|512|FD FF FF FF 28
+Keyboard driver file|sys|Low|0|FF 4B 45 59 42 20 20 20
+Generic JPEG Image file|jpe|Low|0|FF D8
+Generic JPEG Image file|jpeg|Low|0|FF D8
+Generic JPEG Image file|jpg|Low|0|FF D8
+UTF-32-UCS-2 file|none|Low|0|FF FE
+UTF-32-UCS-4 file|none|Low|0|FF FE 00 00
+MSinfo file|mof|Low|0|FF FE 23 00 6C 00 69 00
+Hamarsoft compressed archive|hap|Mid|0|91 33 48 46
+PGP secret keyring_1|skr|Low|0|95 00
+GPG public keyring|gpg|Low|0|99
+InstallShield Script|ins|Mid|0|B8 C9 0C 00
+MS Write file_3|wri|Low|0|BE 00 00 00 AB
+Adobe encapsulated PostScript|eps|Low|0|C5 D0 D3 C6
+Java bytecode|class|Mid|0|CA FE BA BE
+Java Cryptography Extension keystore|jceks|Mid|0|CE CE CE CE
+Microsoft Office document|doc|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Office document|dot|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Office document|pps|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Office document|ppt|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Office document|xla|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Office document|xls|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Microsoft Office document|wiz|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Access project file|adp|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Minitab data file|mtw|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Revit Project file|rvt|Low|0|D0 CF 11 E0 A1 B1 1A E1
+Visio file|vsd|Low|0|D0 CF 11 E0 A1 B1 1A E1
+MSWorks text document|wps|Low|0|D0 CF 11 E0 A1 B1 1A E1
+WinDump (winpcap) capture file|none|Low|0|D4 C3 B2 A1
+Corel color palette|cpl|Low|0|DC DC
+Amiga icon|info|Low|0|E3 10 00 01 00 00 00 00
+Windows executable file_2|com|High|0|E9
+Windows executable file_2|sys|High|0|E9
+UTF-8 file|none|Low|0|EF BB BF
+Windows Script Component (UTF-8)_1|wsf|Mid|0|EF BB BF 3C
+Microsoft Outlook-Exchange Message|msg|Low|512|FD FF FF FF 04
+Visual Studio Solution subheader|suo|Low|512|FD FF FF FF 04
+Excel spreadsheet subheader_2|xls|Low|512|FD FF FF FF 10
+PowerPoint presentation subheader_5|ppt|Low|512|FD FF FF FF 1C 00 00 00
+Excel spreadsheet subheader_7|xls|Low|512|FD FF FF FF 29
+PowerPoint presentation subheader_6|ppt|Low|512|FD FF FF FF 43 00 00 00
+Symantec Ghost image file|gho|Mid|0|FE EF
+Symantec Ghost image file|ghs|Mid|0|FE EF
+Windows executable|sys|High|0|FF
+Windows international code page|cpi|Low|0|FF 46 4F 4E 54
+Windows Registry file|reg|Mid|0|FF FE
+DOS system driver|sys|High|0|FF FF FF FF
+
+##################################################################################################################################
